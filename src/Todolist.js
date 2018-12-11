@@ -17,7 +17,7 @@ class Todolist extends Component {
 
     this.changeState = this.changeState.bind(this);
     this.handleBtnClick = this.handleBtnClick.bind(this);
-    this.handelItemDelet = this.handelItemDelet.bind(this);
+    this.handelItemDelete = this.handelItemDelete.bind(this);
   }
 
   handleBtnClick(){
@@ -27,7 +27,7 @@ class Todolist extends Component {
     })
   }
 
-  handelItemDelet(index){
+  handelItemDelete(index){
     const list = [...this.state.list];
     list.splice(index, 1);
     this.setState({list})
@@ -47,7 +47,7 @@ class Todolist extends Component {
           key={index} 
           content={item} 
           index={index} 
-          deletes={this.handelItemDelet} />
+          deletes={this.handelItemDelete} />
         )
       })
     )
